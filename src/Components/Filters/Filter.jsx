@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Filter = () => {
     const [selectedTag, setSelectedTag] = useState('all')
+
+    // useEffect(() => {
+    //     console.log("document ready!");
+    // }, [])
+
+    // useEffect(() => {
+    //     console.log("selected tag changed");
+    // }, [selectedTag])
+
     return (
-        <div className='container mt-3 mb-3 justify-content-between'>
+        <div className='container mt-3 mb-3 d-flex justify-content-between'>
             <div>
                 <span onClick={() => setSelectedTag('all')} className={selectedTag === 'all' ? "btn btn-dark" : "btn btn-light"}>All</span>
                 <span onClick={() => setSelectedTag('men')} className={selectedTag === 'men' ? "btn btn-dark" : "btn btn-light"}>Men</span>
